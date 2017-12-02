@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +18,7 @@
 
 <body>
     <div id="fullpage">
+        <!--HOMEPAGE-->  
         <div class="section">
         <div id="particles-js"> 
         	<script src="particles.js"></script>
@@ -35,12 +35,9 @@
             <a href="#blurb"><span id="quartercircle4" data-menuanchor="blurb">&nbsp;<h3 class="The-Blurb">The Blurb</h3></span><br /></a>
           </div>
         </div>
-       </div>
-
-<!-- scripts -->
-
+			</div>
 		</div>
-        
+        <!--SECOND PAGE (QUICK LINKS)-->
         <div class="section">
       <div class="quicklinks">
   	    <span class="col-9 box1">&nbsp;
@@ -81,16 +78,17 @@
     	    <a href="https://service.1300acepro.com/onguard/auth/sso/login?schoolKey=hillcrestcc%2Enet%2Egld&next=http%3A%2F%2Fwww%2E1300acepro%2Ecom%2FOnGuardACEPro2014%2Fcontent%2FdoLogin%2Easp&errorCode=0" target="_blank">OnGuard AcePro</a>
     	    <a href="http://www.sense-lang.org/typing/" target="_blank">Typing Tutor</a>
 	        <a href="http://guides.instructure.com/m/4212" target="_blank">Canvas Help Guide</a>
-    	    <a href="http://www.jacplus.com.au/secure/Bookshelf" target="_blank">Jacaranda e-reasources</a>
+    	    <a href="http://www.jacplus.com.au/secure/Bookshelf" target="_blank">Jacaranda e-resources</a>
 	        <a href="https://students.hillcrest.qld.edu.au/SitePages/RemoteApps.aspx" target="_blank">Remote Apps</a>
     	  </div>
     	</span>
       </div>
         </div>
 		
-        
+        <!--THIRD PAGE (SURVEYS)-->
         <div class="section">
  <?php
+			//THIS CALLS ON THE DATABASE AND CREATES THE DYNAMIC OUTPUTS
 $nameErr = $websiteErr = "";
 $name = $website = "";
 
@@ -129,6 +127,7 @@ while($row2 = mysqli_fetch_array($comments2))
 <?php
 }
 ?>
+<!--THE FORM THAT SENDS THE DATA TO THE 'SURVEY' DATABASE TABLE-->
 <div class="survey-input">
   <div>
   <form action="survey.php" method="post">
@@ -144,14 +143,14 @@ while($row2 = mysqli_fetch_array($comments2))
   </div>
 </div>
         </div>
-        
+        <!--FOURTH PAGE (THE BLURB)-->
         <div class="section">
  <?php
-	  //MAKE THIS TABLE RESPONSIVE (SCROLL BAR AND MEDIA QUERIES)
+	  
 $titleErr = $teacherErr = $yearErr = $descriptionErr = $dateErr = "";
 $title = $teacher = $year = $description = $date = "";
 
-
+//OUTPUTS FOR THE BLURB
 ?>
 <table>
 	<tr>
@@ -195,6 +194,8 @@ while($row = mysqli_fetch_array($comments, MYSQL_ASSOC))
     </tr>
 <?php
 }
+	
+	//FORM FOR CREATING ANNOUNCEMENTS IN THE BLURB
 ?>
 </table>
 <div class="survey-input">
@@ -224,6 +225,7 @@ while($row = mysqli_fetch_array($comments, MYSQL_ASSOC))
   </div>
 </div>
 	</div>
+	<!--FIFTH PAGE (NO CONTENT)-->
 	<div class="section">
 	  <h1>
 	  	This section is under construction
